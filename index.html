@@ -1,0 +1,27 @@
+<!-- U54107257 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Bar Chart with D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar:hover {
+            fill: orange;
+        }
+        .bar {
+            transition: fill 0.3s;
+        }
+        .label {
+            font-size: 12px;
+            fill: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Bar Chart</h1>
+    <svg id="chart"></svg>
+    <script src="example.js"></script>
+</body>
+</html>
