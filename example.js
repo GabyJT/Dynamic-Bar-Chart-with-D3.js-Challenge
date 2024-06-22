@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const data = [100, 420, 230, 850, 560, 925];
 
-    // Define dimensions
+    // Define new dimensions
     const width = 800; // Increase the width
     const barHeight = 30; // Increase the height of each bar
     const margin = 5; // Increase the margin between bars
@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const svg = d3.select('#chart')
         .attr('width', width)
         .attr('height', height);
-
+    
+    // Select the SVG container and set dimensions
+    const svg = d3.select('#chart')
+        .attr('width', width)
+        .attr('height', height);
+    
     // Configure the linear scale for x-axis
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(data)])
-        .range([50, width]);
+        .range([50, width - 50]); // Adjust range to fit within the SVG
 
     // Render bars
     const barGroup = svg.selectAll('g')
@@ -51,4 +56,3 @@ document.addEventListener('DOMContentLoaded', () => {
             d3.select(this).attr('fill', 'steelblue');
         });
 });
-
