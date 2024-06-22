@@ -13,11 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .attr('width', width)
         .attr('height', height);
     
-    // Select the SVG container and set dimensions
-    const svg = d3.select('#chart')
-        .attr('width', width)
-        .attr('height', height);
-    
     // Configure the linear scale for x-axis
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(data)])
