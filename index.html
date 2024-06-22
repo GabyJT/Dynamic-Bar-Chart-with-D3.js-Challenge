@@ -7,15 +7,34 @@
     <title>Dynamic Bar Chart with D3.js</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        .bar:hover {
-            fill: orange;
+         font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100vh;
+        }
+        h1 {
+            margin-bottom: 20px;
         }
         .bar {
+            fill: steelblue;
             transition: fill 0.3s;
         }
+        .bar:hover {
+            fill: firebrick;
+        }
         .label {
-            font-size: 12px;
-            fill: black;
+            font-size: 14px;
+            fill: white;
+            text-anchor: start;
+        }
+        svg {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
         }
     </style>
 </head>
