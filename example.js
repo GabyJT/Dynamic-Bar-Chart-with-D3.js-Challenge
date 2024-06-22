@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const svg = d3.select('#chart')
         .attr('width', width)
         .attr('height', height);
-    
+
     // Configure the linear scale for x-axis
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(data)])
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .attr('class', 'bar')
         .attr('width', 0)  // Start width at 0 for transition effect
         .attr('height', barHeight)
-        .attr('fill', 'steelblue')
         .transition()  // Transition effect for bar growth
         .duration(1000)
         .attr('width', d => xScale(d));
