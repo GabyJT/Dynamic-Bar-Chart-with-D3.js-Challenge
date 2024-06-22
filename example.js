@@ -42,9 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add text labels
     barGroup.append('text')
         .attr('class', 'label')
-        .attr('x', d => xScale(d) + 5)
+        .attr('x', d => xScale(d) - 5) // Adjusted to be inside the bar
         .attr('y', barHeight / 2)
         .attr('dy', '.35em')
+        .attr('text-anchor', 'end') // Align text to the end
         .text(d => d);
 
     // Add hover effect
