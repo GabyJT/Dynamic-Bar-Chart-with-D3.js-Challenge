@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = [100, 420, 230, 850, 560, 925];
 
     // Define dimensions
-    const width = 500;
-    const barHeight = 20;
-    const margin = 1;
+    const width = 800; // Increase the width
+    const barHeight = 30; // Increase the height of each bar
+    const margin = 5; // Increase the margin between bars
     const height = (barHeight + margin) * data.length;
 
     // Select the SVG container and set dimensions
